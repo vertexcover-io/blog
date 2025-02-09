@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+  {{/* {{ partial "sidebar.html" (dict "context" . "disableSidebar" true
+  "displayPlaceholder" true) }} {{ partial "toc.html" . }} */}}
+  <article
+    class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]"
+  >
+    <main
+      class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12 hx-flex hx-flex-col hx-items-center hx-justify-center"
+    >
+      {{ if .Title }}
+      <h1
+        class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100"
+      >
+        {{ .Title }}
+      </h1>
+      {{ end }}
+      <div class="content">{{ .Content }}</div>
+
+      <a
+        href="/"
+        class="not-prose hx-font-medium hx-cursor-pointer hx-px-6 hx-py-3 hx-rounded-full hx-text-center hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200 hx-mt-4"
+      >
+        Back to home
+      </a>
+
+    </main>
+  </article>
+</div>
+{{ end }}

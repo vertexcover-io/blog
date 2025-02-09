@@ -18,26 +18,39 @@ markup:
 
 menu:
   main:
-    - name: Blog
+    - identifier: home
+      name: Home
       pageRef: /
       weight: 1
-    - name: Hire Us
-      url: https://vertexcover.io 
+      params:
+        type: essential
+    - identifier: blog
+      name: Blog
+      pageRef: /blog/
       weight: 2
-    - name: Search
+    - identifier: hire-us
+      name: Hire Us
+      url: https://vertexcover.io 
       weight: 3
       params:
+        type: essential
+    - identifier: search
+      weight: 4
+      params:
         type: search
-    - name: OSS
+    - identifier: oss
+      name: OSS
       weight: 5
       url: "https://github.com/vertexcover-io"
       params:
         icon: github
-    - name: Twitter
+    - identifier: twitter
+      name: Twitter
       weight: 6
       url: "https://twitter.com/krg85"
       params:
         icon: x-twitter
+
 
 params:
   navbar:
@@ -45,7 +58,7 @@ params:
     displayLogo: false
 
   footer:
-    displayCopyright: false
+    displayCopyright: true
     displayPoweredBy: true
 
   editURL:

@@ -1,4 +1,4 @@
 ---
-title: Vertexcover Labs
+title: ""
 toc: false
 ---
