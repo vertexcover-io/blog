@@ -1,0 +1,41 @@
+{
+    "title": "Read trusted reviews from our customers",
+    "reviews": [
+        {
+            "name": "Paul Starr",
+            "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+            "rating": 5,
+            "image": "/images/user.avif"
+        },
+        {
+            "name": "John Doe",
+            "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+            "rating": 4,
+            "image": "/images/user.avif"
+        },
+        {
+            "name": "Paul Starr",
+            "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+            "rating": 5,
+            "image": "/images/user.avif"
+        },
+        {
+            "name": "John Doe",
+            "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+            "rating": 4,
+            "image": "/images/user.avif"
+        },
+        {
+            "name": "Paul Starr",
+            "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+            "rating": 5,
+            "image": "/images/user.avif"
+        },
+        {
+            "name": "John Doe",
+            "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+            "rating": 4,
+            "image": "/images/user.avif"
+        }
+    ]
+}
