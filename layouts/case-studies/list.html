@@ -1,0 +1,123 @@
+{{ define "main" }}
+<style>
+  .hx-card-image {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .hx-card-container {
+    width: calc(33.333% - 2rem);
+    margin: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .hx-card-container {
+      width: calc(50% - 2rem);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hx-card-container {
+      width: calc(100% - 2rem);
+    }
+  }
+</style>
+{{- $readMore := (T "readMore") | default "Read more →" -}}
+
+<div class="hx-mx-auto hx-flex hx-flex-wrap">
+  <article
+    class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]"
+  >
+    <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+      <br class="hx-mt-1.5 hx-text-sm" />
+      {{ if .Title }}
+      <h1
+        class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100"
+      >
+        {{ .Title }}
+      </h1>
+      {{ end }}
+      <div class="content">{{ .Content }}</div>
+      {{- $pages := partial "utils/sort-pages" (dict "page" . "by"
+      site.Params.blog.list.sortBy "order" site.Params.blog.list.sortOrder) -}}
+      {{- $paginator := .Paginate $pages 9 -}} {{/* Get all unique tags */}} {{
+      $tags := slice }} {{ range $paginator.Pages }} {{ range .Params.tags }} {{
+      $tags = $tags | append . }} {{ end }} {{ end }} {{ $uniqueTags := uniq
+      $tags }} {{/* Display content grouped by tags */}} {{ range $tag :=
+      $uniqueTags }}
+      <div class="content hx-mb-10">
+        <h2 class="hx-mt-8 hx-mb-4 hx-text-2xl hx-font-bold">
+          {{ (index site.Data.tag (lower $tag)).name }}
+        </h2>
+        <p>{{ (index site.Data.tag (lower $tag)).description }}</p>
+      </div>
+      <div class="hx-flex hx-flex-wrap hx-justify-start">
+        {{ range $paginator.Pages }} {{ if in .Params.tags $tag }}
+        <div
+          class="hx-bg-gray-100 dark:hx-bg-neutral-900 hx-card-container hx-rounded-lg"
+        >
+          <img
+            class="hx-card-image hx-rounded-lg"
+            src="{{ .RelPermalink }}/featured.png"
+            alt="{{ .Title }}"
+          />
+          <div class="hx-p-6">
+            <h4>
+              <a
+                class="hx-block hx-font-semibold hx-text-xl hx-text-slate-900 dark:hx-text-slate-100 hover:hx-text-primary-600 dark:hover:hx-text-primary-400"
+                href="{{ .RelPermalink }}"
+                >{{ .Title }}</a
+              >
+            </h4>
+            {{- if site.Params.blog.list.displayTags -}} {{ with .Params.tags }}
+            <p class="hx-mt-2">
+              {{- range . }}<span
+                class="hx-inline-block hx-px-3 hx-py-1 hx-mr-2 hx-text-xs hx-font-medium hx-bg-gray-100 dark:hx-bg-neutral-800 hx-rounded-full"
+                >#{{ . }}</span
+              >{{ end -}}
+            </p>
+            {{ end -}} {{- end -}}
+            <p
+              class="hx-mt-4 hx-text-gray-600 dark:hx-text-gray-400 hx-leading-relaxed hx-line-clamp-3"
+            >
+              {{- partial "utils/page-description" . -}}
+            </p>
+          </div>
+        </div>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{- if or $paginator.HasPrev $paginator.HasNext }}
+      <nav class="hx-flex hx-justify-between hx-items-center hx-mt-10">
+        {{- if $paginator.HasPrev }}
+        <a
+          href="{{ $paginator.Prev.URL }}"
+          class="hx-px-4 hx-py-2 hx-bg-gray-100 dark:hx-bg-neutral-800 hx-rounded hover:hx-bg-gray-200 dark:hover:hx-bg-neutral-700"
+          >← Previous</a
+        >
+        {{- else }}
+        <div></div>
+        {{- end }}
+
+        <span
+          class="hx-px-4 hx-py-2 hx-bg-gray-100 dark:hx-bg-neutral-800 hx-rounded"
+        >
+          {{ $paginator.PageNumber }}
+        </span>
+
+        {{- if $paginator.HasNext }}
+        <a
+          href="{{ $paginator.Next.URL }}"
+          class="hx-px-4 hx-py-2 hx-bg-gray-100 dark:hx-bg-neutral-800 hx-rounded hover:hx-bg-gray-200 dark:hover:hx-bg-neutral-700"
+          >Next →</a
+        >
+        {{- else }}
+        <div></div>
+        {{- end }}
+      </nav>
+      {{- end }}
+    </main>
+  </article>
+  <div class="max-xl:hx-hidden hx-h-0 hx-w-64 hx-shrink-0"></div>
+</div>
+{{- end -}}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<div class="hx-mx-auto hx-flex hx-flex-wrap">
+  <article
+    class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]"
+  >
+    <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+      <h1
+        class="hx-text-center hx-mt-2 hx-mb-8 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100"
+      >
+        Experiments
+      </h1>
+
+      <div class="content hx-flex hx-justify-center">
+        
+        <table class=" hx-divide-gray-200 dark:hx-divide-gray-700 ">
+          <thead class="hx-bg-gray-50 dark:hx-bg-gray-800">
+            <tr>
+              <th scope="col" class="hx-px-6 hx-py-3 hx-text-left hx-text-xs hx-font-medium hx-text-gray-500 dark:hx-text-gray-400 hx-uppercase hx-tracking-wider">Title</th>
+              <th scope="col" class="hx-px-6 hx-py-3 hx-text-left hx-text-xs hx-font-medium hx-text-gray-500 dark:hx-text-gray-400 hx-uppercase hx-tracking-wider">Description</th>
+              <th scope="col" class="hx-px-6 hx-py-3 hx-text-left hx-text-xs hx-font-medium hx-text-gray-500 dark:hx-text-gray-400 hx-uppercase hx-tracking-wider">Role</th>
+              <th scope="col" class="hx-px-6 hx-py-3 hx-text-left hx-text-xs hx-font-medium hx-text-gray-500 dark:hx-text-gray-400 hx-uppercase hx-tracking-wider">References</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            {{ range .Site.Data.experiments.experiments }}
+            <tr class="">
+              <td class="hx-px-6 hx-py-4 hx-whitespace-nowrap">
+                <a href="{{ .link }}" class="hx-text-blue-600 dark:hx-text-blue-400 hover:hx-underline">{{ .title }}</a>
+              </td>
+              <td class="hx-px-6 hx-py-4">{{ .description }}</td>
+              <td class="hx-px-6 hx-py-4 hx-whitespace-nowrap">{{ .role }}</td>
+              <td class="hx-px-6 hx-py-4">
+                {{ range .other_references }}
+                <a href="{{ .link }}" class="hx-text-blue-600 dark:hx-text-blue-400 hover:hx-underline hx-block">{{ .title }}</a>
+                {{ end }}
+              </td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </article>
+</div>
+{{ end }}

@@ -1,0 +1,52 @@
+{
+    "experiments": [
+        {
+            "title": "Experiment 1",
+            "description": "Experiment 1 description with a link to the experiment",
+            "link": "https://google.com",
+            "role": "Product Manager",
+            "other_references": [
+                {
+                    "title": "Ref 1",
+                    "link": "https://google.com"
+                },
+                {
+                    "title": "Ref 2",
+                    "link": "https://google.com"
+                }
+            ]
+        },
+        {
+            "title": "Experiment 1",
+            "description": "Experiment 1 description with a link to the experiment",
+            "link": "https://google.com",
+            "role": "Product Manager",
+            "other_references": [
+                {
+                    "title": "Ref 1",
+                    "link": "https://google.com"
+                },
+                {
+                    "title": "Ref 2",
+                    "link": "https://google.com"
+                }
+            ]
+        },
+        {
+            "title": "Experiment 1",
+            "description": "Experiment 1 description with a link to the experiment",
+            "link": "https://google.com",
+            "role": "Product Manager",
+            "other_references": [
+                {
+                    "title": "Ref 1",
+                    "link": "https://google.com"
+                },
+                {
+                    "title": "Ref 2",
+                    "link": "https://google.com"
+                }
+            ]
+        }
+    ]
+}

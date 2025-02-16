@@ -1,0 +1,49 @@
+{
+  "title": "Vertexcover Labs",
+  "description": "We bring proven Generative AI expertise to transform your SaaS products.",
+  "about_us": {
+    "title": "About Us",
+    "description": "At Vertexcover, we're a close-knit ensemble of engineers with a relentless focus on impact we have on our client’s business. Our drive comes from solving tough problems with reliable, maintainable and efficient software . We love to partner with companies who've found their product market fit and are ready to take their products from good to great, no matter the tech stack."
+  },
+  "reviews": {
+    "title": "Hear It Straight from Our Clients",
+    "reviews": [
+      {
+        "name": "Paul Starr",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+        "rating": 5,
+        "image": "/images/user.avif"
+      },
+      {
+        "name": "John Doe",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+        "rating": 4,
+        "image": "/images/user.avif"
+      },
+      {
+        "name": "Paul Starr",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+        "rating": 5,
+        "image": "/images/user.avif"
+      },
+      {
+        "name": "John Doe",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+        "rating": 4,
+        "image": "/images/user.avif"
+      },
+      {
+        "name": "Paul Starr",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+        "rating": 5,
+        "image": "/images/user.avif"
+      },
+      {
+        "name": "John Doe",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!",
+        "rating": 4,
+        "image": "/images/user.avif"
+      }
+    ]
+  }
+}

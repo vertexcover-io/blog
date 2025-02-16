@@ -1,0 +1,10 @@
+{
+    "markdown": {
+        "name": "Markdown",
+        "description": "Markdown is a lightweight markup language with a plain text formatting syntax. It is designed to be easy to read and write, and is widely used in documentation, web pages, and other text-based formats."
+    },
+    "guide": {
+        "name": "Guide",
+        "description": "A guide is a document that provides instructions or information about a product or service. It is designed to be easy to read and write, and is widely used in documentation, web pages, and other text-based formats."
+    }
+}
