@@ -62,6 +62,10 @@ menu:
       name: Hiring
       pageRef: /hiring/
       weight: 9
+    - identifier: services
+      name: Services
+      pageRef: /services/
+      weight: 10
 
 params:
   navbar:

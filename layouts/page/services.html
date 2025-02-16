@@ -1,0 +1,85 @@
+{{ define "main" }}
+<style>
+  .hx-client-container {
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .hx-client-image {
+    background-color: #f0f0f0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .hx-client-link {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
+<div class="hx-mx-auto hx-flex hx-flex-wrap content">
+  <article
+    class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]"
+  >
+    <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+      <h1
+        class="hx-text-center hx-mt-2 hx-mb-8 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100"
+      >
+        Services
+      </h1>
+
+      <h2>Types of Services</h2>
+
+      <div class="">
+        <ol>
+          <li class="hx-font-semibold">Consulting 
+            <p class="hx-font-normal hx-ml-4">We provide consulting services to help you understand your business and how to improve it. We can help you with your business strategy, marketing, and operations.</p>
+          </li>
+          <li class="hx-font-semibold">Augmented Team
+            <p class="hx-font-normal hx-ml-4">We provide a team of experts to help you with your project. We can be your extended team and help you with your project.</p>
+          </li>
+          <li class="hx-font-semibold">Full Scale Project Implementation
+            <p class="hx-font-normal hx-ml-4">We implement a full scale project from start to finish. We can help you with the entire project or just a part of it.</p>
+          </li>
+        </ol>
+      </div>
+
+
+      <h2>Expertise</h2>
+
+      <div class="">
+        <ul>
+          <li>Consulting</li>
+          <li>Augmented Team</li>
+          <li>Full Scale Project Implementation</li>
+        </ul>
+      </div>
+
+      <h2>Current & Past Clients</h2>
+
+      <div
+        class="hx-flex hx-flex-wrap hx-items-center hx-justify-center hx-gap-4 hx-mt-8 hx-mb-8"
+      >
+        {{ range .Site.Data.clients }}
+        <div
+          class="hx-flex hx-flex-col hx-items-center hx-justify-center hx-mx-4"
+        >
+          <a
+            href="{{.url}}"
+            target="_blank"
+            class="hx-flex hx-flex-col hx-items-center hx-justify-center hx-client-link"
+          >
+            <img
+              src="/images/ritesh.jpeg"
+              alt="{{ .name }}"
+              class="hx-client-image"
+            />
+            <p class="hx-text-lg">{{ .name }}</p>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </main>
+  </article>
+</div>
+
+{{- end -}}
