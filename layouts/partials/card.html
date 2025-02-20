@@ -1,0 +1,26 @@
+
+
+{{/*  hover:drop-shadow-[0_0_2px_rgba(249,115,22,1)  */}}
+
+
+<article class="hx-max-w-sm hx-overflow-hidden hx-shadow-xl hx-bg-gray6 hx-y-6 hx-hover:hx-scale-105 hx-rounded-xl hx-transition-transform hx-ease-in-out hx-duration-500">
+    <a href="{{ .context.RelPermalink }}" class="no-underline">
+
+        {{/*  if img is defined, use it, otherwise default  */}}
+        {{ $img := cond (isset . "img") .img (print .context.RelPermalink "/featured.png") }}
+        {{/*  make sure file exists  */}}
+        {{ $img := cond (fileExists $img) $img "/img/default-cover.webp" }}
+
+        <img class="hx-w-full hx-m-0 hx-mb-1 hx-rounded-t-xl" src="{{ $img }}" alt="{{ .context.Title }}">
+
+        <section class="hx-p-5">
+                <h5>{{ .context.Title }}</h5>
+                <p class="hx-text-gray3 hx-min-h-[100px]">{{ .context.Description }}</p>
+                {{ range .context.Params.tags }}
+                    <span class="hx-tag hx-tag-{{ . }}">
+                        #{{ . }}
+                    </span>
+                {{ end }}
+        </section>
+    </a>
+</article>

@@ -11,16 +11,30 @@
     }
 
     .hx-min-h-component {
-        min-height: calc(60vh - var(--navbar-height));
+        min-height: calc(50vh - var(--navbar-height));
     }
 
     .hx-max-w-component {
-        max-width: max(60%, 600px);
+        max-width: max(70%, 700px);
         margin: 0 auto;
     }
 
+    .hx-schedule-call-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .hx-schedule-call-secondary-text {
+        color: #e7e7e7;
+    }
+
+    .hx-schedule-call-container {
+        min-height: 200px;
+    }
+
 </style>
-<div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }} hx-text-center'>
+<div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
   {{ partial "sidebar.html" (dict "context" . "disableSidebar" true
   "displayPlaceholder" false) }} 
   <article
@@ -36,27 +50,49 @@
       {{ end }}
       <div class="content">{{ .Content }}</div>
 
-      <div class="hx-flex hx-gap-2 hx-items-center hx-justify-center hx-flex-col hx-mb-12 hx-mt-12 hx-min-h-component hx-max-w-component" >
-        <div class="hx-logo hx-bg-gray-100 hx-rounded-full hx-p-2 "></div>
-        <h1 class="hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">Vertexcover Labs</h1>
-        <p class="hx-text-gray-500 dark:hx-text-gray-400 hx-text-xl">We are a boutique software engineering firm, with a proven track record of rapidly delivering high-quality software systems tailored to meet evolving business objectives</p>
+      <div class="hx-flex hx-gap-2 hx-justify-center hx-items-center hx-flex-col hx-mb-12 hx-mt-16 hx-min-h-component hx-max-w-component content" >
+        {{/*  <div class="hx-logo hx-bg-gray-100 hx-rounded-full hx-p-2 "></div>  */}}
+        <h1 class="hx-text-5xl">{{ .Site.Data.home.title }}</h1>
+        <p class="hx-font-medium hx-text-xl">{{ .Site.Data.home.description }}</p>
       </div>
 
 
-      <div class="hx-flex hx-gap-2 hx-items-center hx-justify-center hx-flex-col hx-mb-12 hx-max-w-component" >
+      <div class="hx-flex hx-gap-2 hx-items-center hx-justify-center hx-flex-col hx-mb-12 hx-max-w-component content" >
       
-        <h1 class="hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">What we do</h1>
+        <h2 class="hx-text-4xl hx-font-bold hx-tracking-tight hx-w-full hx-text-slate-900 dark:hx-text-slate-100">{{ .Site.Data.home.about_us.title }}</h2>
         <hr class="dark:hx-border-neutral-800 " />
-        <p class="hx-text-gray-500 dark:hx-text-gray-400">
-            At Vertexcover, we're a close-knit ensemble of engineers with a relentless focus on impact we have on our client’s business. Our drive comes from solving tough problems with reliable, maintainable and efficient software . We love to partner with companies who've found their product market fit and are ready to take their products from good to great, no matter the tech stack.
-            We are language and platform agnostic and have experience working with Python, Go, Typescript, Javascript, Kotlin, OCaml and ReasonML, ensuring we always have the right tool for the task at hand. For us, writing software is an art, dictated not by the language, but by the craft and principles behind it.</p>
-            <a
+        <p >
+            {{ .Site.Data.home.about_us.description }}
+            </p>
+            {{/*  <a
               href="/"
               class="not-prose hx-font-medium hx-cursor-pointer hx-px-6 hx-py-3 hx-rounded-full hx-text-center hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200 hx-mt-4"
             >
               Hire Us
-            </a>
+            </a>  */}}
+      
       </div>
+
+      <div class="hx-flex hx-gap-2 hx-items-center hx-justify-center hx-flex-col hx-mb-12 hx-schedule-call-container hx-max-w-component content" > 
+
+
+      <a
+        href="#"
+        target="_blank"
+        class="not-prose hx-flex hx-items-center hx-gap-2 hx-font-medium hx-cursor-pointer hx-px-2 hx-py-1 hx-rounded-full hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200 hx-mt-4"
+      >
+        <img src="/images/ritesh.jpeg" alt="Ritesh" class="hx-schedule-call-image">
+        <div class="hx-flex hx-flex-col hx-px-2">
+          <p >Schedule a call</p>
+          <p class="hx-schedule-call-secondary-text hx-text-xs">with Ritesh, our founder</p>
+        </div>
+        <div class="hx-flex hx-items-center hx-justify-center hx-rounded-full hx-bg-white hx-schedule-call-image">
+
+          <svg xmlns="http://www.w3.org/2000/svg" color="black" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hx-w-5 hx-h-5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </a>
+
+    </div>
 
 
 
@@ -68,11 +104,11 @@
           <h2
             class="hx-text-center hx-text-4xl hx-font-bold hx-tracking-tight hx-text-gray-900 sm:hx-text-5xl hx-mb-6 dark:hx-text-gray-100"
           >
-            {{ .Site.Data.review.title }}
+            {{ .Site.Data.home.reviews.title }}
           </h2>
 
           <div class="hx-grid hx-grid-cols-1 hx-gap-6 sm:hx-grid-cols-2 lg:hx-grid-cols-3">
-            {{ range .Site.Data.review.reviews }}
+            {{ range .Site.Data.home.reviews.reviews }}
             <div class="hx-rounded-lg hx-bg-gray-50 hx-shadow-xs hx-bg-gray-100 hx-mx-2 hx-my-2 hx-p-4 dark:hx-bg-neutral-900">
             
                         <div class="hx-flex hx-gap-2">
@@ -104,12 +140,27 @@
       <div class="hx-flex hx-gap-2 hx-items-center hx-justify-center hx-flex-col hx-mb-12 hx-mt-12" >
 
 
+        <div class="hx-flex hx-gap-2 hx-items-center hx-justify-center hx-flex-col hx-mb-12 hx-schedule-call-container hx-max-w-component content" > 
+
+
           <a
-                  href="/"
-                  class="not-prose hx-font-medium hx-cursor-pointer hx-px-6 hx-py-3 hx-rounded-full hx-text-center hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200 hx-mt-4"
-                >
-                  Hire Us
-                    </a>
+            href="#"
+            target="_blank"
+            class="not-prose hx-flex hx-items-center hx-gap-2 hx-font-medium hx-cursor-pointer hx-px-2 hx-py-1 hx-rounded-full hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200 hx-mt-4"
+          >
+            <img src="/images/ritesh.jpeg" alt="Ritesh" class="hx-schedule-call-image">
+            <div class="hx-flex hx-flex-col hx-px-2">
+              <p >Schedule a call</p>
+              <p class="hx-schedule-call-secondary-text hx-text-xs">with Ritesh, our founder</p>
+            </div>
+            <div class="hx-flex hx-items-center hx-justify-center hx-rounded-full hx-bg-white hx-schedule-call-image">
+    
+              <svg xmlns="http://www.w3.org/2000/svg" color="black" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hx-w-5 hx-h-5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+    
+        </div>
+    
       </div>
     </main>
   </article>

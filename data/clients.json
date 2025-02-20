@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Client 1",
+        "logo": "https://via.placeholder.com/150",
+        "url": "https://www.google.com" 
+    },
+    {
+        "name": "Client 2",
+        "logo": "https://via.placeholder.com/150",
+        "url": "https://www.google.com"
+    },
+    {
+        "name": "Client 3",
+        "logo": "https://via.placeholder.com/150",
+        "url": "https://www.google.com"
+    },
+    {
+        "name": "Client 4",
+        "logo": "https://via.placeholder.com/150",
+        "url": "https://www.google.com"
+    },
+    {
+        "name": "Client 5",
+        "logo": "https://via.placeholder.com/150",
+        "url": "https://www.google.com"
+    },
+    {
+        "name": "Client 6",
+        "logo": "https://via.placeholder.com/150",
+        "url": "https://www.google.com"
+    }
+]
